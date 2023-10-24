@@ -1187,6 +1187,11 @@ subroutine EVPdynamics
   integer         :: shortstep, i, j, elem, elnodes(4), n, step_count!, ice_elem, sum_ice_elem
   real(kind=WP)    :: rdt, drag1, drag2, dragw, detu, detv, fc, a, b, c, inv_mass, inv_mass_a, acc, x1
   real(kind=WP)    :: thickness, inv_thickness, umod, umodw, rhsu, rhsv, wx_el, wy_el, ice_elem, sum_ice_elem
+! filtration
+  real(kind=WP)  :: u1(2), tau_inv
+  integer       ::  nelem, q, jend
+
+
 
 !aa67  FOR TEST
   integer ::    elem_size
@@ -1344,6 +1349,27 @@ subroutine EVPdynamics
 
      call exchange_elem(U_n_ice)   !!!!!!!!!!!!!!!!!!!!!
 
+
+     !!!!!!!!!!!!!!!!!!!!!!! ice velocity filtration         !!!!!!!!!!!!!!!!!!!!!!!!!1
+     Do elem=1,myDim_elem2D
+        elnodes=elem2D_nodes(:,elem)
+        u1=0.0_WP
+        jend = 4
+        if(elnodes(1)==elnodes(4)) jend = 3
+        Do j=1,jend
+           nelem=elem_neighbors(j,elem)
+           if(nelem>0) u1=u1+UAB(:, nelem) -UAB(:,elem)
+        end do
+        elnodes=elem2D_nodes(:,elem)
+        U_rhs_2D(:,elem)=U_rhs_2D(:,elem)+tau_inv*u1*elem_area(elem) &
+             *sum(w_cv(1:4,elem)*depth(elnodes))
+     end do
+
+
+
+
+
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 !aaaaaaaaaaaaaaaaaaaa
