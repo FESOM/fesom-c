@@ -1,0 +1,71 @@
+
+############################################################
+## MPI parallel and serial versions
+##
+## Intel Fortran and C compiler and compiler flags
+#0FC = mpiifort
+#0CC = mpiicc
+## Options for optimization and MPI PARALLEL VERSION
+#0FCFLAGS = -O3 -xHost -no-prec-div -align -DUSE_MPI
+## Options for optimization and SERIAL VERSION
+##aaFCFLAGS = -O3 -xHost -no-prec-div -align
+## Options for serial debugging:
+#FCFLAGS = -g -xHost -traceback -fpe:0 -check all
+## Options for debugging and openmp:
+#FCFLAGS = -g -xHost -openmp -traceback -fpe:0 -check all
+#
+## Gnu Fortran compiler and compiler flags for serial and OpenMP
+FC = mpiifort
+CC = mpiicc
+##
+MPIFLAGS = -DUSE_MPI 
+#MPIFLAGS =  
+## OPTIONS FOR OPTIMIZATION
+#FCFLAGS = -O4 -march=native -funroll-loops 
+FCFLAGS = -g  $(MPIFLAGS)  -O0 -traceback
+FCFLAGS = -O4  -march=native -funroll-loops  $(MPIFLAGS)
+#FCFLAGS = $(MPIFLAGS)
+#FCFLAGS = -DUSE_MPI
+CCFLAGS = $(FCFLAGS) -DLINUX -DUNDER_  $(MPIFLAGS)
+#CCFLAGS = $(FCFLAGS) 
+############################################################
+
+#Linker
+LINK = $(FC)
+# Archiver, for libturbulence.a
+#AR = xiar
+
+
+## PATH TO GOTM TURBULENCE
+GOTMDIR      = $(PWD)/turbulence
+GOTMLIB       =  -L$(GOTMDIR)/lib -lturbulence
+GOTMINCS      = -I$(GOTMDIR)
+
+# PATH TO PnetCDF
+#Ollie
+PNETCDFINC = -I/global/AWIsoft/parallel-netcdf/1.7.0_intel/include
+PNETCDFLIB = -L/global/AWIsoft/parallel-netcdf/1.7.0_intel/lib -lpnetcdf
+#Linux
+#PNETCDFINC = -I/home/mayiva/PnetCDF/include
+#PNETCDFLIB = -L/home/mayiva/PnetCDF/lib -lpnetcdf
+
+## PATH TO NETCDF
+#Ollie (presetup vars)
+#NETCDFINC = -I$(NETCDF_INC)
+#NETCDFLIB = $(NETCDF_LD) 
+#Ollie hard setup
+NETCDFINC = -I/global/AWIsoft/netcdf/4.6.1_intel_18.0.3/include
+NETCDFLIB = -L/global/AWIsoft/netcdf/4.6.1_intel_18.0.3/lib -lnetcdff -L/global/AWIsoft/hdf5/1.10.2_gnu/lib -Wl,-rpath=/global/AWIsoft/hdf5/1.10.2_gnu/lib -L/global/AWIsoft/netcdf/4.6.1_intel_18.0.3/lib -Wl,-rpath=/global/AWIsoft/netcdf/4.6.1__intel_18.0.3/lib -lnetcdf -lnetcdf
+#Linux
+#NETCDFINC = -I/usr/include
+#NETCDFLIB = -L/usr/lib/x86_64-linux-gnu -lnetcdff -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -lnetcdf -lnetcdf -ldl -lm
+
+# METISLIB, only for initialization of MPI domain decomposition
+#METISINC = -I/opt/metis/include
+#METISLIB = /opt/metis/lib/libmetis.a
+
+# NAME OF THE EXECUTABLES
+EXE = fesom_coast.exe
+EXE_INI = fv_ini.x
+
+
