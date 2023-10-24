@@ -1,0 +1,402 @@
+!==============================================================================!
+!   INPUT FILE FOR PARAMETERS and FLAGS, FVOM model                            !
+!                                                                              !
+!   FORMAT&RULES:			                                                   !
+!       1.) VARIABLE  = VALUE  (EQUAL SIGN MUST BE USED)                       !
+!       2.) FLOATING POINT VARIABLES MUST CONTAIN A PERIOD "." EX: 1.3, 2.,etc !
+!       3.) ORDER OF VARIABLES IS NOT IMPORTANT                                !
+!       4.) DO NOT USE COMMAS TO SEPARATE VARIABLES                            !
+!       5.) DO NOT EXCEED EIGHTY CHARACTERS PER LINE                           !
+!       6.) .TRUE. is T, .FALSE. is F                                          !
+!                                                                              ! 
+!==============================================================================!
+!                FEOM CASE TITLE (not more than 25 symbols without gaps)       !
+! Please, use this 'title' to name initial files title_depth.out,              !
+! title_nod2d.out and etc.
+!==============================================================================!
+
+ TITLE = HB
+ 
+!==============================================================================!
+!                 PARAMETERS CONTROLLING TIME STEPS                            !
+! dt_2D  - time step for the barotropic mode in seconds                        !
+! dt  - time step for the baroclinic mode in seconds                           !
+! nsteps - total amount of barotropic steps                                    !
+! time_jd0 - the Julian day corresponding to the start of simulated period     !        
+!==============================================================================!
+
+ dt_2D = 1.3493125 
+ dt = 5.493125
+ nsteps = 5256000 
+ JD0 = 2452853.0
+
+!===============================================================================!
+!                 PARAMETERS CONTROLLING INPUT/OUTPUT                           !
+! INDIR is a directory, where input files should be situated                    !
+! OUTDIR is a directory, where output files will be written                     !
+! IREP is frequency of the model report updating (number of steps)              !
+! IREC is frequency of the model recoding of output (number of steps)           !
+! IRESTART is frequency of saving of model's variable for the hot start(N steps)! 
+! RESTART is type of the restart ('cold_start' or 'hot_start')                  !
+! VERBOSITY (optional): the larger, the more diagnostic output                  !
+!            0: only during setup,                                              !
+!            1 (default): add diagnostic values in time steps,                  !
+!            2:           add timing of main time stepping loop,                ! 
+!            3:           add timing of time step subroutines                   !
+!===============================================================================!
+
+ INDIR       = ./
+ OUTDIR      = ./Output/
+ MESHPATH    = ./RUN/
+
+ IREP = 10         
+ IREC = 15000
+ IRESTART = 15000
+ RESTART  =  cold_start 
+
+ VERBOSITY = 1 
+
+
+!===============================================================================!
+!       TYPE OF THE COORDINATES                                                 !     
+!                         T: CARTESIAN                                          ! 
+!                         F: SPHERICAL                                          !
+!===============================================================================!
+
+ cartesian = T
+
+!===============================================================================!
+!       Coriolis                                                                !     
+!                         T: turn on                                            ! 
+!                         F: turn off                                           !
+! If CARTESIAN=T, then, please, specify appropriate latitude value in degree.   !
+!===============================================================================!
+
+ Coriolis_TF = T
+ lat_cartesian = 50.0
+
+!===============================================================================!
+!        2D MOMENTUM ADVECTION                                                  !
+!                        1 - SCALAR : SECOND ORDER SCHEME                       !
+!                        2 - UPWIND : SECOND ORDER SCHEME                       !
+! For the details, please, read S. Danilov and A. Androsov (2014),              !
+! Cell-vertex discretization of shallow water equations on mixed meshes.        !
+! Ocean Dynamics. doi: 10.1007/s10236-014-0790-x                                !
+!===============================================================================!
+
+ mom_adv_2D =  2
+ 
+!===============================================================================!
+!        3D MOMENTUM ADVECTION                                                  !
+!                        1 - momentum advection upwind                          !
+!                        2 - adv P1                                             !
+!                        3 - scalar                                             !
+!===============================================================================! 
+
+ mom_adv_3D =  1
+
+!===============================================================================!
+!        Vertical advection                                                     !
+!                        1 - momentum advection upwind                          !
+!                        2 - momentum advection scalar                          !
+! fic_point can be 0 (fictitious point is situated at the bottom, net 'no slip' !
+! condition), 1 (fictitious point is situated where Av*u_z=Cd*u*IuI) or         !
+! 2 (fictitious point is situated                                               !
+! at the deepest velocity vector position.                                      !
+!===============================================================================! 
+
+ vert_adv = 1
+ ex_vert_visc = F
+ im_vert_visc = F
+ im_vert_visc_fic = T
+ fic_point = 1
+		
+!===============================================================================!
+!        TRACER ADVECTION                                                       !
+!                       1 - UPWIND : SECOND ORDER SCHEME                        !
+!                       2 - MUSCL  : THIRD ORDER SCHEME                         !
+!                       3 - MIXED  : 0.85 MUSCL + 0.15 UPWIND, for example.     !
+!                       4 - MIURA                                                               !
+! if(tracer_adv==3) then please, provide weights for the muscl and upwind parts !
+! mu_w+up_w should be equal to 1.                                               !
+!===============================================================================!
+
+ tracer_adv =  1
+ mu_w=0.85
+ up_w=0.15
+ 
+!==========================================================================================!
+!           PARAMETERS CONTROLLING BOTTOM (SURFACE) FRICTION                               !
+! Cd is the bottom friction coefficient                                                    !                                                  
+! z0b_min is bottom roughness height, minimum value(use in fv_mixing, gotm subroutine)     !
+! z0s_min is surface roughness height, minimum value(use in fv_mixing, gotm subroutine)    !
+! za is roughness caused by suspended sediment (right know is not used,                    !
+! another approach is applied, for details see fv_average_dynamic)                         !
+! BFC                                                                                      !
+!                       1 - Cd = prescribed Cd                                             !
+!                       2 - Cd is calculated using z0b_min+z0s_min                         !
+!==========================================================================================!
+
+ Cd = .005
+ z0b_min = .01
+ z0s_min = .01
+ za = .00
+ BFC = 2
+
+!============================================================================================!
+!                 PARAMETERS CONTROLLING DIFFUSIVITY                                         !
+!============================================================================================!
+
+ Abh0 = 1.e11
+ C_Smag = .2
+ A_hor =  10
+ tau_c = .4
+ snul    = 5.e-4
+ filt_2D = T
+ filt_bi_2D = F
+ bih_2D = F
+ filt_3D = T
+ filt_bi_3D = F
+ bih_3D = F
+
+!============================================================================================!
+!                  PARAMETERS CONTROLLING MODEL EQUATIONS                                    !
+! If only one tracer works (T or S), then the constant value will be taken for another one.  !
+! It will be prescribed using S_const (in practical scale) or T_const (in C°).               !
+! If BAROTROPIC or/and  BAROTROPIC_3D is/are True, please, set SALINITY_ON and TEMP_ON to    !
+! False, otherwise baroclinic case will be calculated.                                       !
+! If Barotropic_3D (barotropic, multilayer case) is true, doesn't matter what is BAROTROPIC. !
+!Attention: in all cases both constant salinity and temperature will be used to calculate    !
+!reference density (density_0).                                                              !                 
+!============================================================================================!
+
+ BAROTROPIC = F
+ BAROTROPIC_3D = F
+ SALINITY_ON = T
+ TEMP_ON = T
+ S_const = 30.0
+ T_const = 20.0
+ 
+!============================================================================================!
+!             CONTROLLING VERTICAL TURBULENCE                                                !
+! Vert_turb:   1 ---> Pacanowski and Philander, 1981 (this is schema for deep ocean)         !
+!              2 ---> GOTM                                                                   !
+!              3 ---> b-l                                                                    !
+!============================================================================================!        
+Vert_turb = 2
+
+!============================================================================================!
+!                  PARAMETERS CONTROLLING DENSITY CALCULATION                                !
+! if ind_sigma=1, then sigma(k)=-[(k-1)/(kb-1)]^pow_sig.                                     !
+! Please, specify pow_sig (any real number, if 1 - uniform sig. lev.,                        !
+! if 2 - layers satisfying a parabolic function)                                             !
+! if ind_sigma=2, then you have general sigma levels.                                        !    
+! Please, specify lev_bot and lev_sur, which determine the density of sigma levels           !
+! distribution near the surface and bottom.                                                  !
+! If ind_sigma=3, then you have constant layer transformation, which is not real sigma. Near !  
+! bottom or/and near surface you have layers with constant depth. If the depth is too large, !
+! than you have case of ind_sigma=2.                                                         !
+! This model is useful for some task in frame sediment movement simulation.                  !
+! For this case you need prescribe the number of these constant layers and its thickness.    !
+! Also you should prescribe the critical depth,                                              !
+! from which you will shift to usual sigma destr. (ind_sigma=2).                             !
+! If the depth is less than sum of the depths of 'constant layers',                          !
+! than the uniform sigma layers will be presc.                                               !       
+! Fot the details see set_sigma procedure and next reference:                                !                     
+! Pietrzak, J.D., Jan B. Jakobson, Hans Burchard, Hans Jacob Vested, Ole Petersen , 2002.    !
+! A three-dimensional hydrostatic model for coastal and ocean modelling                      !
+! using a generalised topography following co-ordinate system. Ocean Modelling 4.            !
+!============================================================================================!                                                 
+! Type of vertical descritization (typr_vd) can be only "sigma" right now.                   !
+! Number of sigma levels, if ind_sigma=1 and pow_sig=2, then should be odd number.           !
+! Type of sigma distribution, can be from 1 to 3.                                            !
+!============================================================================================! 
+
+ type_vd =  sigma 
+ nsigma = 21  
+ ind_sigma = 1    
+ pow_sig = 2. 
+ lev_bot=1.
+ lev_sur=1.
+ KSw = 0.5 0.5 1.5 1.5 ! the near surface layers with constant depth
+ KBw = 0.5 0.5 1.5 1.5 ! the near bottom layers with constant depth
+ D_ref_max = 40.0
+
+!=========Parameters Controlling River Forcing===========================================================!
+! Riv is a logical variable, please, set 'T', if you like to include rivers through solid boundaries.    !
+! If riv = T the mass, momentum, salt and temperature fluxes will be added.                              !
+! If you like to prescribe discharge distribution across sigma layers, set  'Q_sigma' to 'T',            !
+! if you know the stratification in the mouth area, please, set 'Stratif_sigma' to 'T'.                  ! 
+! If you like to treat mouth area as an open boundary, please, set up relaxation parameters:             !
+! riv_relax - to relax input characteristics, relax2riv - to relax output characteristics (days)         !
+! and spesifiy 'riv_OB' as 'T' here. In that case you need to provide info only about the elevation and  ! 
+! salinity, temperature distribution. This option will work well only, if you know bottom friction       ! 
+! coefficient and optimal scheme to introduce it in your particular domain.                              !
+! If you would like to include rivers only through open boundaries, please, specify Riv = F.             !
+!========================================================================================================!
+
+ Riv = T
+ Stratif_sigma = F
+ Q_sigma = F
+ Riv_OB = F
+ riv_relax = 3.0
+ relax2riv = 30.0
+ Time_riv_begin = 2452853.0
+
+!=========Do you want to apply atmospheric forcing?=======================================================!
+
+key_atm = F ! key to switch OFF or ON atmospheric forcing, check namelist_bc.nc
+Atm_pr = 0  ! What is this ? I have no idea (Ivan). 
+
+!=========Open Boundary conditions========================================================================!
+
+key_obc = F    ! key to switch ON or OFF relaxing to open boundary T and S), check namelist_bc.nc, cl_relax
+key_obc_2d = F ! key to switch ON or OFF relaxing to open boundary T and S), check namelist_bc.nc, TF_presence
+
+!=========Open Boundary conditions========================================================================!
+
+key_ic = F    ! key to switch ON or OFF module for interpolation of initial conditions from netcdf file
+
+
+!=========Parameters Controlling Tidal Forcing========================================!
+! Attention: please, prescribe TF_presence = F and T_potential = T, if tidal forcing  !
+! is represented only by tidal potential.                                             !
+! Please, specify harmonics from the list below in the same order, skipping           !
+! unnecessary one. Please, separate waves by space without a comma.                   !
+! Possible harmonics are M2 S2 N2 K2 K1 O1 P1 Q1 Mf Mm Ssa M4.                        !
+! Please, keep in mind M4 will not take part in potential construction.               !                                                                                 !
+! If TF_presence = T, the amplitudes and phases of chosen components should           !
+! be provided for the open boundary nodes.                                            !
+!=====================================================================================!
+
+ TF_presence = T
+ Time_tf  = non-julian
+ Harmonics_tf = S2
+ T_potential = F
+ 
+!=========================================================================================================!
+
+
+
+!=========Parameters controling the short wave radiative transfer in the sea==============================!
+! swr_bot_refl_part - part of swr, which is reflected from bottom ([0,1])!  
+! If swr_bot_min<swr_H/swr_0 then bottom reflection will be orginized, where swr_H - part of short wave   !
+! radiation, which reaches bootmo,swr_0 - short wave radiation, absorbed by surface.                      !         
+! Type_swr_body:                                                                                          !
+!               1 ---> Paulson and Simpson (1977) according to Jerlov (1976) classification,              !
+!             swr_z=SWR_0*(R*exp(z/a)+(1-R)*exp(z/b))-solar radiation absorbed by the ocean at the depth z!
+!             a,b - attenuation coefficients (blue-green), R -percent of the flux associated              !
+!             with the longer wavelength irradiance                                                       !
+!               2 ---> Soloviev, 1982, a= (/0.45,0.27,0.28/), b=(/0.07,2.8,71.5/),                        !
+!               swr_z=SWR_0*sum(a*exp(b*z))-solar radiation absorbed by the ocean at the depth z          !
+! If (Type_swr_body==1) then, please, specify a,b,R according to Jerlov (1976) classification (I,II,...)  !
+! If you would like to specify different water types for the subdomains,please, set jer_const = F,        !
+! otherwise jer_const = T. If jer_const = F, please, provide an input file TITLE_jer.out with info        ! 
+! about R,a,b for each node (reading  nod2D*3 matrix, R(i) a(i) b(i), i=1,nod2D).                         !
+!=========================================================================================================!         
+
+
+swr_bot_refl_part = 0.01
+swr_bot_min = 0.1 !specific heat of seawater; part of swr, which is reflected from bottom ([0,1])   
+type_swr_body = 1
+jer_const= T
+R=0.78
+a=1.4
+b=7.9                                                                   
+
+!=========Parameters Controlling Temp/Salinity Adjustments======================!
+
+! TS_adj = F
+
+!====Parameters controlling cyclic_length ======================================!
+
+ cyclic_length=360.0 ! should be in the range (0,360)
+
+!=========Parameters Controlling Depth Adjustments==============================!
+! Dcr, Dmin - Critical depth and Minimal depth                                  !
+!===============================================================================!
+
+ Dcr = 0.1
+ Dmin= 0.25
+
+!=========Parameters Controlling Output Related To Tidal Forcing======================! 
+!This option allows to organize output within tidal period.                           !
+!User can choose to orginize output of elevation and                                  !
+!averaged velocities or/and 3D velocities. T_period is the tidal period of interest,  !
+!in hours, T_num is the number of period after which the writing of output starts     !
+!(if 10, for example, then writing will be organized from 10th to 11th period).       !
+!T_aval - amount of values per period [T_num*T_period, (T_num+1)*T_period) for output.! 
+!T_step - time step for baroclinic mode,in seconds, within mentioned period,          !
+!which should be equal to T_period*3600/(T_aval*i), where i is positive integer value.!                                                     
+!Attention: during the mentioned period time steps for both modes will be changed,    !
+!if T_step != dt. The ratio dt/dt_2D will be equal to initial one                     !
+!Suggestion: make T_step as close to dt as possible                                   !
+!=====================================================================================!
+
+T_out = F          ! Do you want to organize output? True or False
+T_out_el_va = F    ! Output for the elevation and averaged velocities. True or False
+T_out_3Dvel = F    ! Output for the 3D velocities. True or False
+T_period = 12.42   ! Period of interest in hours
+T_num = 12         ! Amount of periods to equilibrate the system
+T_aval = 64        ! Amount of records of each value per period for analysis
+T_step = 3.3493125 ! Appropriate baroclinic time step (dt), it should be equal to T_period*3600/(T_aval*i), 
+                   ! where i is arbitrary integer > 0
+
+!============ Parameters Controlling Wetting/Drying=============================!
+                                                                                                                           
+ WET_DRY_ON = T
+
+!====VARIABLES CONTROLLING NETCDF OUTPUT========================================!
+
+ key_nc_output = T   ! check outputfilelist.dat
+ NETCDF_var_amount = 3
+ NETCDF_var = el ua va 
+ 
+!==== Parameter controlling sponge layer======================================================!
+
+ SL_obn = T
+ SL_obn_user_def = T  !If you would like to prescribe the sponge layer by your own
+                      !please, set T and keep SL_obn also true
+ SL_radius = 20000.0  ! Radius defines the area around OBN, where nudging works, [m] 
+
+!==== Parameters, which are controlling stabilization at the ob================================!
+
+mixed_BP_grad_OB = F
+Cd_bz = 10.0  
+Bp_bz = 0.0 
+
+!==== Parameter controlling Open Boundary/Solid Boundary relaxation===========================!
+! cl_relax = T, if you would like to have relaxation on the OB.                               !
+! clim_relax - relaxetion to climatology in days (input),                                    !
+! relax2clim_ac -- relaxetion to climatology in days (output), relax2clim_ac>>clim_relax,    !
+! cl_solid_boder_relax=T, if you would like to have relaxation at the solib boundary,         !
+! relax2clim - relaxation at the solid boundary should be provided by user as input file      !
+!=============================================================================================!
+
+cl_relax = T
+clim_relax = 0.05
+relax2clim_ac = 0.5
+cl_solid_boder_relax = F
+
+!==== Parameter controlling Open Boundary Temp/Salt Series Nudging==============!
+
+ OB_nudg = F
+ ALPHA_nudg = .0014  ! Alpha defines how strong the nudging in the interio domain, can be from 0 to 1 (excluding 0 and 1, 1 corresponds to 'no nudging')
+ RADIUS = 50000. ! Radius define the area around OBN, where nudging works, [m]        
+         
+!================================= SEDIMENT===================================================!
+! comp_sediment = T, if you would like to turn on sediments
+! if cl_relax_sed=T the parameters for the relaxetion to climatology are used
+!=============================================================================================!
+
+ 
+ comp_sediment = F
+ sed_boun_flux = F
+ cl_relax_sed =F
+ d_m = 15.0e-5                 !         d_m  - grain -size [m]
+ plop_s = 2650.0              !         plop_s - density of individual grains [kg/m3]
+ e_p = 0.4                  !         e_p       - porous of the grain
+ Er0 = 0.0005             ! Er0 - empirical floc erosion rate between 10**(-4) and 10**(-2)
+ sed_relax = 1.            ! if set_boun_flax = T
+ relax2sed = 5.            ! if set_boun_flax = T     
+         

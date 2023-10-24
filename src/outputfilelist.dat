@@ -1,0 +1,848 @@
+!total number of files:
+35
+!=========== Field File Name =================================================================== 
+eta.nc
+! If snapshot = 1, averaged needed = 2
+1
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet)
+0
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y
+7.9, 54.18833333333333, 4.0, 53.0
+! frequency of output (in time speps)
+180
+! special frequency (not in use)
+0
+! total number of variables in file
+1   
+! list of variables , amount of numbers should not be changed
+1,10,3,8,9,8,9,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+!=========== Field File Name =================================================================== 
+sst.nc
+! If snapshot = 1, averaged needed = 2
+1
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet)
+0
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y
+7.9, 54.18833333333333, 4.0, 53.0
+! frequency of output (in time speps)
+180
+! special frequency (not in use)
+0
+! total number of variables in file
+1
+! list of variables , amount of numbers should not be changed
+10,2,3,8,9,8,9,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+!=========== Field File Name =================================================================== 
+sss.nc
+! If snapshot = 1, averaged needed = 2
+1
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet)
+0
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y
+7.9, 54.18833333333333, 4.0, 53.0
+! frequency of output (in time speps)
+180
+! special frequency (not in use)
+0
+! total number of variables in file
+1
+! list of variables , amount of numbers should not be changed
+11,2,3,8,9,8,9,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+!=========== Station File Name =================================================================== 
+Ballum.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.6858997  55.1307983  8.6858997  55.1307983
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Borkum.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.7477999  53.5574989  6.7477999  53.5574989
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Bremerhaven.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.5681000  53.5449982  8.5681000  53.5449982
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Buesum.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.8591995  54.1222000  8.8591995  54.1222000
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Cuxhaven.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.7174997  53.8678017  8.7174997  53.8678017
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Delfzijl.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.9299998  53.3300018  6.9299998  53.3300018
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+DenHelder.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 4.7500000  52.9700012  4.7500000  52.9700012
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+DunkerqueTG.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 2.3666999  51.0480995  2.3666999  51.0480995
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Elbe.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.1139002  54.0167007  8.1139002  54.0167007
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Emden.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 7.1863999  53.3367004  7.1863999  53.3367004
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Esbjerg.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.4333000  55.4667015  8.4333000  55.4667015
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Europlatform.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 3.2800000  52.0000000  3.2800000  52.0000000
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+FINO1.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.5833330  54.0000000  6.5833330  54.0000000
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Harlingen.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 5.4099998  53.1800003  5.4099998  53.1800003
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+HavnebyRomo.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.5654001  55.0870018  8.5654001  55.0870018
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Helgoland.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 7.8899999  54.1789017  7.8899999  54.1789017
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+HoekVanHolland.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 4.1199999  51.9799995  4.1199999  51.9799995
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Huibertgat.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.4000001  53.5699997  6.4000001  53.5699997
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Husum.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 9.0247002  54.4721985  9.0247002  54.4721985
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+K13Alpha.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 3.2200000  53.2200012  3.2200000  53.2200012
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+NsbIICU.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.3333330  55.0000000  6.3333330  55.0000000
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+NsbIII.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.7833328  54.6833344  6.7833328  54.6833344
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+NsbII.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.3333330  55.0000000  6.3333330  55.0000000
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Oostende.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 2.9200001  51.2299995  2.9200001  51.2299995
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Oosterschelde11.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 3.4800000  51.6399994  3.4800000  51.6399994
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+RoompotBuiten.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 3.6800001  51.6199989  3.6800001  51.6199989
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+TWEms.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 6.3499999  54.1666679  6.3499999  54.1666679
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+UFSDeutscheBucht.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 7.4499998  54.1666679  7.4499998  54.1666679
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Vidaa.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.6667004  54.9667015  8.6667004  54.9667015
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Vlissingen.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 3.5999999  51.4500008  3.5999999  51.4500008
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Wilhelmshaven.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.1450005  53.5144005  8.1450005  53.5144005
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+!=========== Station File Name =================================================================== 
+Wittduen.nc 
+! If snapshot = 1, averaged needed = 2 
+1 
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet) 
+3 
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y 
+ 8.3838997  54.6316986  8.3838997  54.6316986
+! frequency of output (in time steps) 
+1 
+! special frequency (not in use) 
+0 
+! total number of variables in file 
+5 
+! list of variables , amount of numbers should not be changed 
+1,2,3,8,9,10,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 
+
+
+
+!! list of available variables (check fv_ncoutput.f90 for updated list)
+  
+      nvar=0
+      nvar=nvar+1
+      varlist(nvar)%name =           'eta' ! name   
+      varlist(nvar)%modelname =      'eta_n+depth(depth<0)' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'sea surface elevation'  ! full variable name in the NetCDF file
+      varlist(nvar)%units =          'meter'  ! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1
+      varlist(nvar)%varid =         nvar !1 ! ID of variable
+      nvar=nvar+1
+      varlist(nvar)%name =           'u' ! name   
+      varlist(nvar)%modelname =      'U_n' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'velocity in x direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm/s'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        2 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      2 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !2 ! ID of variable
+      nvar=nvar+1      
+      varlist(nvar)%name =           'v' ! name   
+      varlist(nvar)%modelname =      'V_n' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'velocity in y direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm/s'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        2 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      2 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !3 ! ID of variable
+      nvar=nvar+1
+      varlist(nvar)%name =           'ssu' ! name   
+      varlist(nvar)%modelname =      'U_n(1,:)' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'surface velocity in x direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm/s'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      2 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !4 ! ID of variable
+      nvar=nvar+1
+      varlist(nvar)%name =           'ssv' ! name   
+      varlist(nvar)%modelname =      'V_n(1,:)' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'surface velocity in y direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm/s'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      2 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !5 ! ID of variable
+      nvar=nvar+1
+      varlist(nvar)%name =           'u2d' ! name   
+      varlist(nvar)%modelname =      'U_n_2D(1,:)' ! name of variable in model                 
+      varlist(nvar)%standard_name =  '2D velocity in x direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm/s'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !6 ! ID of variable      
+      nvar=nvar+1      
+      varlist(nvar)%name =           'v2d' ! name   
+      varlist(nvar)%modelname =      'U_n_2D(2,:)' ! name of variable in model                 
+      varlist(nvar)%standard_name =  '2D velocity in y direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm/s'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !7 ! ID of variable      
+      nvar=nvar+1      
+      varlist(nvar)%name =           'temperature' ! name   
+      varlist(nvar)%modelname =      'TF' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'temperature'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'grad C'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        2 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      3 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !8 ! ID of variable     
+      nvar=nvar+1      
+      varlist(nvar)%name =           'salinity' ! name   
+      varlist(nvar)%modelname =      'SF' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'salinity'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'psu'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        2 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      3 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !9 ! ID of variable  
+      nvar=nvar+1      
+      varlist(nvar)%name =           'sst' ! name   
+      varlist(nvar)%modelname =      'TF(1,:)' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'temperature'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'grad C'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      3 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !10 ! ID of variable     
+      nvar=nvar+1      
+      varlist(nvar)%name =           'sss' ! name   
+      varlist(nvar)%modelname =      'SF(1,:)' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'salinity'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'psu'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      3 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !11 ! ID of variable   
+      nvar=nvar+1      
+      varlist(nvar)%name =           'taux' ! name   
+      varlist(nvar)%modelname =      'taux' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'wind stress along x direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'N/m2'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !12 ! ID of variable        
+      nvar=nvar+1      
+      varlist(nvar)%name =           'tauy' ! name   
+      varlist(nvar)%modelname =      'tauy' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'wind stress along y direction'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'N/m2'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !13 ! ID of variable    
+      nvar=nvar+1      
+      varlist(nvar)%name =           'taux_node' ! name   
+      varlist(nvar)%modelname =      'taux_node' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'wind stress along x direction on node'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'N/m2'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !14 ! ID of variable        
+      nvar=nvar+1      
+      varlist(nvar)%name =           'tauy_node' ! name   
+      varlist(nvar)%modelname =      'tauy_node' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'wind stress along y direction on node'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'N/m2'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !15 ! ID of variable        
+      nvar=nvar+1      
+      varlist(nvar)%name =           'mslp' ! name   
+      varlist(nvar)%modelname =      'mslp' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'mean sea level pressure'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'Pascals'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !16 ! ID of variable            
+      nvar=nvar+1      
+      varlist(nvar)%name =           'emp' ! name   
+      varlist(nvar)%modelname =      'emp' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'evaporation minus precipitation'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'kg/m2/s'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !17 ! ID of variable            
+      nvar=nvar+1      
+      varlist(nvar)%name =           'qns' ! name   
+      varlist(nvar)%modelname =      'qns' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'downward non solar heat over the ocean'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'W/m2'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !18 ! ID of variable  
+      nvar=nvar+1      
+      varlist(nvar)%name =           'qsr' ! name   
+      varlist(nvar)%modelname =      'qsr' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'downward solar heat over the ocean'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'W/m2'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !19 ! ID of variable     
+      nvar=nvar+1      
+      varlist(nvar)%name =           'zbar' ! name   
+      varlist(nvar)%modelname =      'zbar' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'node depth'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        1 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      2 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !20 ! ID of variable
+      nvar=nvar+1      
+      varlist(nvar)%name =           'Z' ! name   
+      varlist(nvar)%modelname =      'Z' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'cell depth'! full variable name in the NetCDF file
+      varlist(nvar)%units =          'm'! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        2 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      2 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !21 ! ID of variable        
+      nvar=nvar+1      
+      varlist(nvar)%name =           'mask_wd_node' ! name   
+      varlist(nvar)%modelname =      'mask_wd_node' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'mask (wetting_drying) nodes'! full variable name in the NetCDF file
+      varlist(nvar)%units =          ''! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         1 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !22 ! ID of variable      
+       nvar=nvar+1      
+      varlist(nvar)%name =           'mask_wd' ! name   
+      varlist(nvar)%modelname =      'mask_wd' ! name of variable in model                 
+      varlist(nvar)%standard_name =  'mask (wetting_drying) elements'! full variable name in the NetCDF file
+      varlist(nvar)%units =          ''! variable units in the NetCDF file      
+      varlist(nvar)%onnode =         0 ! if on nod =1 , if on elements =0, other =-1
+      varlist(nvar)%timedim =        1 ! time dimension 0 (not in time), 1 (in time)
+      varlist(nvar)%vertdim =        0 ! vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+      varlist(nvar)%type_task =      1 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+      varlist(nvar)%varid =          nvar !23 ! ID of variable 
+
+   !! Description:
+   !!    first initialization of netcdf file before first time step should be done.
+   !!    at each time step subroutine output_do should be called
+   !!     to control output file 'outputfilelist.dat' should be modified:
+   !!     each file could be or snapshots or averaged values for fixed frequency in time steps.
+   !!     for example: write to nc file "output100avg.nc" mean values of one variable(ilelist(1)%numvars): eta_n 
+   !!                  averaged for 100 time steps (filelist(1)%freq), 
+   !!                  in the list of variabes (filelist(1)%vars) should be indicated wich variabes to save:
+   !!           !total number of files:
+   !!           1
+   !!           !filelist(1)%name=
+   !!           output100avg.nc
+   !!           !filelist(1)%snapshot=
+   !!           0
+   !!           !filelist(1)%freq=
+   !!           100
+   !!           !filelist(1)%specfreq=
+   !!           0
+   !!           !filelist(1)%numvars=
+   !!           1
+   !!           !filelist(1)%vars(1)=
+   !!           1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+   !!
+   !!
+   !!  list of possible variabes is in  SUBROUTINE define_varlist
+   !!  to add more variables subroutines define_varlist and one of  
+   !!  getvar0d/getvar1d/getvar2d (depens on number of variable dimensions) should be modified
+   !!  add description and parameters of variable in define_varlist
+   !!  and extand select case in getvar?d . 
+   !!  example how to extend output list with Jc(nsigma-1,nod2D) :
+   !!    1. extend subroutines define_varlist
+   !!          at the end of variabes list add:
+   !!          nvar=nvar+1     ! increase number of possible variables 
+   !!          varlist(nvar)%name =           'temperature' ! name how it will be in netCDF file  
+   !!          varlist(nvar)%modelname =      'TF' ! name of variable in model                 
+   !!          varlist(nvar)%standard_name =  'temperature'! full variable name in the NetCDF file
+   !!          varlist(nvar)%units =          'grad C'! variable units in the NetCDF file      
+   !!          varlist(nvar)%onnode =         1 ! 1 for temperature while it is on node , if on nod =1 , if on elements =0, other =-1
+   !!          varlist(nvar)%timedim =        1 ! 1 while it resolved in time, dimension 0 (not in time), 1 (in time)
+   !!          varlist(nvar)%vertdim =        2 ! 2 while it is allocate(TF(nsigma-1,nod2D)) vertical dimension 0 , 1 (verticaly resolved) sigma, 2 sigmam1
+   !!          varlist(nvar)%type_task =      3 ! T,S,... =3, U_n,V_n,... =2, eta_n,... =1      
+   !!          varlist(nvar)%varid =          nvar !8 ! ID of variable   
+   !!    2. TF is 3D variable, however x-y plane is only one dimension so for us it is 2d variable
+   !!       extend getvar2d subroutine, add one more case were nvar should be from define_varlist (arlist(nvar)%varid = nvar):
+   !!         case(8)
+   !!            varbas2d(i)%snapshot =  TF 
+   !!    3. now it is possible to use 8 in !filelist(1)%vars(1)= from outputfilelist.dat
+
+

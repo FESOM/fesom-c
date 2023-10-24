@@ -1,0 +1,71 @@
+
+############################################################
+## MPI parallel and serial versions
+##
+## Intel Fortran and C compiler and compiler flags
+#0FC = mpiifort
+#0CC = mpiicc
+## Options for optimization and MPI PARALLEL VERSION
+#0FCFLAGS = -O3 -xHost -no-prec-div -align -DUSE_MPI
+## Options for optimization and SERIAL VERSION
+##aaFCFLAGS = -O3 -xHost -no-prec-div -align
+## Options for serial debugging:
+#FCFLAGS = -g -xHost -traceback -fpe:0 -check all
+## Options for debugging and openmp:
+#FCFLAGS = -g -xHost -openmp -traceback -fpe:0 -check all
+#
+## Gnu Fortran compiler and compiler flags for serial and OpenMP
+FC = mpiifort #mpif90 # Ollie intel-> mpiifort
+CC = mpiicc#mpicc  # Ollie intel -> mpiicc
+##
+MPIFLAGS = -DUSE_MPI 
+#MPIFLAGS =  
+## OPTIONS FOR OPTIMIZATION
+#FCFLAGS = -O4 -march=native -funroll-loops 
+FCFLAGS = -g -fbounds-check -fbacktrace  $(MPIFLAGS) -C -u -depend -O0
+FCFLAGS = -O0  $(MPIFLAGS) -g -traceback -check all -check bounds -check uninit -ftrapuv -debug all -gen-interfaces  -warn interfaces 
+FCFLAGS = -O3  -march=native -funroll-loops  $(MPIFLAGS)
+#FCFLAGS = -DUSE_MPI
+CCFLAGS = $(FCFLAGS) -DLINUX -DUNDER_  $(MPIFLAGS)
+#CCFLAGS = $(FCFLAGS) 
+############################################################
+
+#Linker
+LINK = $(FC)
+# Archiver, for libturbulence.a
+#AR = xiar
+
+
+## PATH TO GOTM TURBULENCE
+GOTMDIR      = $(PWD)/turbulence
+GOTMLIB       =  -L$(GOTMDIR)/lib -lturbulence
+GOTMINCS      = -I$(GOTMDIR) 
+
+# PATH TO PnetCDF
+#Ollie
+PNETCDFINC = -I/sw/spack-levante/parallel-netcdf-1.12.2-vrp23r/include
+PNETCDFLIB = -L/sw/spack-levante/parallel-netcdf-1.12.2-vrp23r/lib -Wl,-rpath,/sw/spack-levante/parallel-netcdf-1.12.2-vrp23r/lib -lpnetcdf
+#Linux
+#PNETCDFINC = -I/home/mayiva/PnetCDF/include
+#PNETCDFLIB = -L/home/mayiva/PnetCDF/lib -lpnetcdf
+
+## PATH TO NETCDF
+#Ollie (presetup vars)
+#NETCDFINC = -I$(NETCDF_INC)
+#NETCDFLIB = $(NETCDF_LD) 
+#Ollie hard setup
+NETCDFINC = -I/sw/spack-levante/netcdf-fortran-4.5.3-r5r3ev/include
+NETCDFLIB = -L/sw/spack-levante/netcdf-fortran-4.5.3-r5r3ev/lib -lnetcdff -Wl,-rpath,/sw/spack-levante/netcdf-fortran-4.5.3-r5r3ev/lib 
+#Linux
+#NETCDFINC = -I/usr/include
+#NETCDFLIB = -L/usr/lib/x86_64-linux-gnu -lnetcdff -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -lnetcdf -lnetcdf -ldl -lm
+
+# METISLIB, only for initialization of MPI domain decomposition
+#METISINC = -I/opt/metis/include
+#METISLIB = /opt/metis/lib/libmetis.a
+
+# NAME OF THE EXECUTABLES
+EXE = fesom_coast.exe
+EXE_INI = fv_ini.x
+
+
