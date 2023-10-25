@@ -282,6 +282,7 @@ real(kind=WP), allocatable, dimension(:,:) :: cHrhsi
 real(kind=WP), allocatable, dimension(:) ::  a_ice_RK, m_ice_RK, m_snow_RK, U_rhs_ice_tmp
 real(kind=WP), allocatable, dimension(:,:) :: tmparr
 real(kind=WP), allocatable, dimension(:,:) :: tmparr_e
+real(kind=WP), allocatable, dimension(:) :: ice_pressure
 
 !real(kind=WP), allocatable ::  tmp1(:,:), tmp2(:,:)
 !

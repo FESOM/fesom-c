@@ -56,6 +56,11 @@ subroutine ice_setup()
     Cdu_lf = 0.0_WP
     Cdv_lf = 0.0_WP
 
+    allocate(ice_pressure(elem_size))
+    ice_pressure = 0.0_WP
+
+    
+
     ! ice reology VPE
     allocate(sigma11(elem_size), sigma12(elem_size), sigma22(elem_size))
     sigma11=0.0_WP
@@ -867,7 +872,13 @@ subroutine stress_tensor
         asum = w_cv(1,elem) *a_ice(elnodes(1)) + w_cv(2,elem) *a_ice(elnodes(2)) &
              + w_cv(3,elem) *a_ice(elnodes(3)) + w_cv(4,elem) *a_ice(elnodes(4))
 
-        ice_strength = Pstar*(msum)*exp(-c_pressure*(1.0_WP - asum))
+!        asum = w_cv(1,elem) *exp(-c_pressure*(1.0_WP - a_ice(elnodes(1)))) &
+!             + w_cv(2,elem) *exp(-c_pressure*(1.0_WP - a_ice(elnodes(2)))) &
+!             + w_cv(3,elem) *exp(-c_pressure*(1.0_WP - a_ice(elnodes(3)))) &
+!             + w_cv(4,elem) *exp(-c_pressure*(1.0_WP - a_ice(elnodes(4))))
+
+
+        ice_strength = Pstar*(msum)*asum!exp(-c_pressure*(1.0_WP - asum))
 
 !+++++++++++++++++++++++++++++++++++++++++++
 ! deformation rate tensor on element elem
@@ -890,6 +901,8 @@ subroutine stress_tensor
        delta = sqrt(delta)
  !aa150623      delta_stress_e(elem) = delta
        pressure = ice_strength/(delta + delta_min)
+       !dyagnostic
+       ice_pressure(elem) = pressure
 
        r1 = pressure*(eps1 - delta) 
        r2 = pressure*eps2*vale
@@ -926,6 +939,8 @@ subroutine stress_tensor
     call exchange_elem(ice_delta)
     call exchange_elem(ice_div)
     call exchange_elem(ice_share)  ! ice share sqrt(((eps11-eps22)*0.5)^2+eps12^2) (for output of stress )        
+
+    call exchange_elem(ice_pressure)
 
 
 #endif
@@ -1011,7 +1026,7 @@ subroutine stress2rhs
         c = w_cv(1,elem) *a_ice(elnodes(1)) + w_cv(2,elem) *a_ice(elnodes(2)) &
                      + w_cv(3,elem) *a_ice(elnodes(3)) + w_cv(4,elem) *a_ice(elnodes(4))
 
-        inv_mass = c/max(0.1_WP,rhoice*a + rhosno*b )    
+        inv_mass = 1.0_WP/max(0.1_WP,rhoice*a + rhosno*b )    
 
         if (mass > 0.1_WP) then
             U_rhs_ice(1,elem) = U_rhs_ice(1,elem)*inv_mass/elem_area(elem) + grad_ssh_x(elem)

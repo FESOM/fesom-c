@@ -1025,7 +1025,7 @@ CONTAINS
             endif
          case(41)
             if (use_ice) then
-                varbas1d(i)%snapshot =  tmparr_e(1,:)
+                varbas1d(i)%snapshot =  ice_pressure
             else
                 varbas1d(i)%snapshot =  0.0_WP
             endif
