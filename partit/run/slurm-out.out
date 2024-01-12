@@ -1,0 +1,39 @@
+Module for Intel Compiler and Libraries, ifort, icc, icpc; mkl, ipp, tbb,... version 2018.5.274 loaded.
+Module for impi,  version 2018.4.274 loaded.
+Module for netcdf version 4.6.2_gnu loaded
+Currently Loaded Modulefiles:
+ 1) intel.compiler/18.0.5(default)   3) netcdf/4.6.2_gnu(default)  
+ 2) intel.mpi/18.0.4(default)       
+Mo 17. Feb 13:58:18 CET 2020
+ =========================
+ Mesh is read
+ =========================
+**** Reading initial mesh time =        0.086 seconds. ****
+ =========================
+ Mesh is read : nod2D=       66177  elem2D=       65536  nl=          21
+ Min/max depth on mype:    20.0000000000000        20.0000000000000     
+ 3D tracer nodes on mype      1324181
+ =========================
+**** Checking and initializing mesh time =        0.801 seconds. ****
+ Calling partit
+  
+ Check for isolated nodes, new iteration ========
+ No isolated nodes found
+ === LOAD BALANCING ===
+ 2D nodes: min, aver, max per part         458         459         461
+2D nodes: percent min, aver, max   99.782%, 100%,  100.436%
+ 3D nodes: Min, aver, max per part        9618        9650        9681
+3D nodes: percent min, aver, max   99.668%, 100%,  100.321%
+ Partitioning is done.
+**** Partitioning time =        3.103 seconds. ****
+ Setting up communication arrays using 1 thread (serially)
+ Communication arrays have been set up
+**** Storing partitioned mesh time =        7.067 seconds. ****
+**** Total time =       11.057 seconds. ****
+Starting hierarchic partitioning with 1 level(s)
+Level:	1   Total
+Npart:	144   144
+Partitioning into 144 subdomains on level 1 with Metis version 5.1.0
+Distribution weight: 2D and 3D nodes
+METIS edgecut 724206
+Mo 17. Feb 13:58:29 CET 2020
