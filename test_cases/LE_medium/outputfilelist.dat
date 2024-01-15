@@ -1,0 +1,18 @@
+!total number of files:
+1
+!=========== Field File Name ===================================================================
+LE.nc
+! If snapshot = 1, averaged needed = 2
+1
+! Type of file 0 - full domain, 3 - station (2,3 does not work yet)
+0
+! Position of station/zoom rect/transect ends, lower left (ll) X, ll Y , ur X, ur Y
+7.9, 54.18833333333333, 4.0, 53.0
+! frequency of output (in time speps)
+300
+! special frequency (not in use)
+0
+! total number of variables in file
+5
+!G list of variables , amount of numbers should not be changed
+1,2,3,8,9,8,9,31,32,33,36,37,29,28,27,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0
