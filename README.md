@@ -1,7 +1,8 @@
 # FESOM-C
 
 The FESOM-C, the coastal branch of the Finite-volumE Sea ice – Ocean Model (FESOM2). This model retains many numerical characteristics of FESOM2, notably its finite-volume cell-vertex discretization. However, FESOM-C's dynamical core is distinct, particularly in its approach to time stepping, adoption of a terrain-following vertical coordinate, and the development of hybrid meshes that integrate triangles and quads. These first two features were essential in establishing FESOM-C as a separate branch. The implementation of hybrid mesh technology enhances computational efficiency. This is because quadrilateral cells, which have fewer edges than their triangular counterparts, are less prone to the spurious inertial modes associated with triangular cell-vertex discretization and require reduced dissipation. The hybrid mesh design enables the use of quasi-quadrilateral unstructured meshes, where triangular cells are employed solely to connect quadrilateral sections of varying resolutions or in places where quadrilateral cells are excessively distorted.
-
+## 
+ **Website:** [FESOM-C on fesom.de](https://fesom.de/models/fesom-c/)
 ## Contacts
 
 - Vera Sidorenko: `Vera.Sidorenko@awi.de`
