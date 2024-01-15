@@ -485,6 +485,16 @@ subroutine initial_state
 !           close(50)
                  !  else
            TF = T_const
+           if (len(trim(title))==2 .AND. title=='LE') then
+              do n=1,node_size
+                 a = coord_nod2D(1,n)
+                 if (a < 0.0_WP) then
+                    TF(:,n) = 5.0_WP/0.28_WP
+                 else
+                    TF(:,n) = 10.0_WP/0.28_WP
+                 endif
+              enddo
+           endif
         endif
         if (SALINITY_ON) then
 !not MPI
