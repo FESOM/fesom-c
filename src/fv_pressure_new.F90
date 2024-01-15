@@ -195,10 +195,10 @@ SUBROUTINE baroclinic_pressure_gradient_3D
      !Bar_pru_3D=Bar_pru_3D*0.0_WP
      !Bar_prv_3D=Bar_prv_3D*0.0_WP
 
-     if (time_jd-time_jd0<30.0_WP) then
-        Bar_pru_3D=Bar_pru_3D*(time_jd-time_jd0)/30.0_WP
-        Bar_prv_3D=Bar_prv_3D*(time_jd-time_jd0)/30.0_WP
-     end if
+!     if (time_jd-time_jd0<30.0_WP) then
+!        Bar_pru_3D=Bar_pru_3D*(time_jd-time_jd0)/30.0_WP
+!        Bar_prv_3D=Bar_prv_3D*(time_jd-time_jd0)/30.0_WP
+!     end if
 
      ! baroclinic_pressure_gradient_2D (inlined from subroutine)
      Bar_pr_2D(1,elem) = sum(Bar_pru_3D(1:nsigma-1,elem)*Je(1:nsigma-1,elem))
