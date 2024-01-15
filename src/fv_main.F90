@@ -1927,11 +1927,11 @@ SUBROUTINE oce_timestep
 !SH SKIPPED     if (ver_mix == 1) call oce_mixing_PP
 !SH SKIPPED     if (ver_mix == 2) call GOTM
      if (ver_mix == 3) then
-        if (len(trim(title))==2 .AND. title=='LE') then
-           call d3_end_LE
-        else
+!        if (len(trim(title))==2 .AND. title=='LE') then
+!           call d3_end_LE
+!        else
            call d3_end
-        end if
+!        end if
      end if
 
      !$ if (iverbosity >= 3) t3=omp_get_wtime()
@@ -2019,11 +2019,11 @@ SUBROUTINE oce_timestep
 !SH SKIPPED FOR NOW     if (ver_mix == 1) call oce_mixing_PP
 !SH SKIPPED FOR NOW     if (ver_mix == 2) call GOTM
      if (ver_mix == 3) then
-        if (len(trim(title))==2 .AND. title=='LE') then
-           call d3_end_LE
-        else
+!        if (len(trim(title))==2 .AND. title=='LE') then
+!           call d3_end_LE
+!        else
            call d3_end
-        end if
+!        end if
      end if
 
 !#ifdef USE_MPI
