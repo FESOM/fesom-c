@@ -17,3 +17,7 @@ Other files and directories are created using `partit`. Directories named `*_XX`
 - `namelist.ice` - Namelist for the ice model (not used in the LE experiment).
 - `outputfilelist.dat` - File to control output into NetCDF files.
 
+#### postproc
+- energy_tocheck.dat  - file with total energy, to control
+- interp_lines_z_sigma.py  - python script to regrid output on transect aslon X (NetCDF output)
+- lines_regular_0_T25.nc - example of output from interp_lines_z_sigma.py
