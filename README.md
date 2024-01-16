@@ -20,10 +20,16 @@ Fofonova, V., Androsov, A., Sander, L., Kuznetsov, I., Amorim, F., Hass, H. C., 
 
 Kuznetsov, I., Androsov, A., Fofonova, V., Danilov, S., Rakowsky, N., Harig, S., and Wiltshire, K. H.: Evaluation and Application of Newly Designed Finite Volume Coastal Model FESOM-C, Effect of Variable Resolution in the Southeastern North Sea, Water, 12, https://doi.org/10.3390/w12051412, 2020.
 
+Fofonova​​​​​​​, V., Kärnä, T., Klingbeil, K., Androsov, A., Kuznetsov, I., Sidorenko, D., Danilov, S., Burchard, H., and Wiltshire, K. H.: Plume spreading test case for coastal ocean models, Geosci. Model Dev., 14, 6945–6975, https://doi.org/10.5194/gmd-14-6945-2021, 2021.
+
 Nerger, L., Tang, Q., and Mu, L.: Efficient ensemble data assimilation for coupled models with the Parallel Data Assimilation Framework: example of AWI-CM (AWI-CM-PDAF 1.0), Geoscientific Model Development, 13, 4305–4321, https://doi.org/10.5194/gmd-13-4305-2020, 2020.
+
+Neder, C., Fofonova, V., Androsov, A., Kuznetsov, I., Abele, D., Falk, U., et al. (2022). Modelling suspended particulate matter dynamics at an Antarctic fjord impacted by glacier melt. Journal of Marine Systems, 231, 103734. https://doi.org/10.1016/j.jmarsys.2022.103734.
 
 Rubinetti, S.; Kuznetsov, I.; Fofonova, V.; Androsov, A.; Gnesotto, M.; Rubino, A.; Zanchettin, D. Water Mass Transport Changes through the Venice Lagoon Inlets from Projected Sea-Level Changes under a Climate Warming Scenario. Water, 15, 3221. https://doi.org/10.3390/w15183221 , 2023.
 
 Pham, H.V. Dal Barco, M.K. Cadau, M. Harris, R. Furlan, E. Torresan, S. Rubinetti, S. Zanchettin, D. Rubino, A. Kuznetsov, I., Barbariol, F., Benetazzo, A., Sclavo, M., Critto, A. Multi-Model Chain for Climate Change Scenario Analysis to Support Coastal Erosion and Water Quality Risk Management for the Metropolitan City of Venice. Sci. Total Environ., 904, 166310. https://doi.org/10.1016/j.scitotenv.2023.166310 , 2023.
 
 Kuznetsov, I., Rabe, B., Androsov, A., Fang, Y.-C., Hoppmann, M., Quintanilla-Zurita, A., Harig, S., Tippenhauer, S., Schulz, K., Mohrholz, V., Fer, I., Fofonova, V., and Janout, M.: Dynamical reconstruction of the upper-ocean state in the Central Arctic during the winter period of the MOSAiC Expedition, EGUsphere [preprint], https://doi.org/10.5194/egusphere-2023-1353, 2023. 
+
+Bonthond, G., Beermann, J., Gutow, L. et al. Benthic microbial biogeographic trends in the North Sea are shaped by an interplay of environmental drivers and bottom trawling effort. ISME COMMUN. 3, 132 (2023). https://doi.org/10.1038/s43705-023-00336-3.
