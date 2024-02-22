@@ -96,7 +96,58 @@ subroutine d3_end
   real(kind=WP), allocatable  ::  xx1(:), yy1(:), btr(:), btr1(:), b1(:), b2(:), c2(:)
   real(kind=WP)                :: deltt
 
+  character(len=100) :: filename
+  integer :: io_status
+
   integer                           :: node, nz, elem, elnodes(4), it
+
+  if (mype==0 .AND. mod(n_dt,1000)==0 )  then
+      if (key_wrap_3d_first) then 
+         
+         key_wrap_3d_first=.false.
+
+         ! write parameters
+         filename='d3_end_dump/d3_param.dat'
+         open(unit=77, file=filename, form='unformatted', status='replace', action='write', iostat=io_status)
+         if (io_status /= 0) then
+         print *, 'Error opening file!'
+         return
+         end if
+      
+         write(77) nsigma, dt, cka, Dmin, z0b_min, z0s_min, beta_scale, snul, PR_num, density_0, comp_sediment, plop_s
+         write(77) myDim_nod2D, eDim_nod2D, myDim_elem2D, eDim_elem2D, eXDim_elem2D
+         close(77) 
+
+         ! write arrays
+         filename='d3_end_dump/d3_param_arrays.dat'
+         open(unit=77, file=filename, form='unformatted', status='replace', action='write', iostat=io_status)
+         if (io_status /= 0) then
+         print *, 'Error opening file!'
+         return
+         end if
+      
+         write(77) depth, sigma, elem2D_nodes, w_cv
+         close(77) 
+
+      endif  
+
+      ! write arrays at selected  time step
+
+      ! Write restart
+      write (dirname, '(I10.10)')  n_dt
+      write(filename,*) 'd3_end_dump/',trim(ADJUSTL(trim(dirname))),'_arrays_in.dat'
+      fname=ADJUSTL(trim(fname))
+      !write(*,*) 'Write restart file: ', fname
+      open(unit=77, file=filename, form='unformatted', status='replace', action='write', iostat=io_status)
+      if (io_status /= 0) then
+         print *, 'Error opening file!'
+         return
+      end if
+
+      write(77) bt, snu, Kv, Av, eta_n, Unode, Vnode, TF, SF, zbar, windx, windy, Jc
+      close(77) 
+   endif    
+
 
   allocate(xx1(nsigma),yy1(nsigma),btr(nsigma), btr1(nsigma), b1(nsigma), b2(nsigma), c2(nsigma))
   xx1 = 0.0_WP
@@ -296,6 +347,31 @@ subroutine d3_end
 
   enddo ! end for nodes
 
+  DO elem=1,myDim_elem2D
+   elnodes=elem2D_nodes(:,elem)
+   DO nz=1,nsigma
+   Av(nz,elem)=sum(w_cv(1:4,elem)*snu(nz,elnodes))
+   END DO
+  END DO
+
+  if (mype==0 .AND. mod(n_dt,1000)==0 )  then
+   ! write arrays at selected  time step
+
+   ! Write restart
+   write (dirname, '(I10.10)')  n_dt
+   write(filename,*) 'd3_end_dump/',trim(ADJUSTL(trim(dirname))),'_arrays_out.dat'
+   fname=ADJUSTL(trim(fname))
+   !write(*,*) 'Write restart file: ', fname
+   open(unit=77, file=filename, form='unformatted', status='replace', action='write', iostat=io_status)
+   if (io_status /= 0) then
+      print *, 'Error opening file!'
+      return
+   end if
+
+   write(77) bt, snu, Kv, Av
+   close(77) 
+endif    
+
 #ifdef USE_MPI
   call exchange_nod(Kv)
   call exchange_nod(snu)
@@ -305,12 +381,6 @@ subroutine d3_end
   call exchange_nod(tke_dissip)
 #endif
 
-  DO elem=1,myDim_elem2D
-     elnodes=elem2D_nodes(:,elem)
-     DO nz=1,nsigma
-  	Av(nz,elem)=sum(w_cv(1:4,elem)*snu(nz,elnodes))
-     END DO
-  END DO
 
 #ifdef USE_MPI
   call exchange_elem(Av)
