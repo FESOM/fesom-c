@@ -149,6 +149,10 @@ logical                      :: key_ic         ! switch ON or OFF module for int
 integer                      :: type_swr_body               !R-percent of the flux associated with the longer wavelength irradiance
                                                            ! See also Simpson and Dickey (1981)
 logical                      :: key_nc_output  ! switch ON or OFF netCDF output
+
+logical                      :: key_wrap_3d_first=.true.        ! switch ON or OFF for paramerers dumping for 3d_wrapper
+logical                      :: key_wrap_3d=.true.        ! switch ON or OFF for data dumping for 3d_wrapper
+
 !++++++++++++++++++++++++++++++
 ! SBC, atmosphere forcing
 !++++++++++++++++++++++++++++++
