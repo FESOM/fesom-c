@@ -96,7 +96,7 @@ subroutine d3_end
   real(kind=WP), allocatable  ::  xx1(:), yy1(:), btr(:), btr1(:), b1(:), b2(:), c2(:)
   real(kind=WP)                :: deltt
 
-  character(len=100) :: filename
+  character(len=100) :: filename, dirname
   integer :: io_status
 
   integer                           :: node, nz, elem, elnodes(4), it
@@ -136,8 +136,8 @@ subroutine d3_end
       ! Write restart
       write (dirname, '(I10.10)')  n_dt
       write(filename,*) 'd3_end_dump/',trim(ADJUSTL(trim(dirname))),'_arrays_in.dat'
-      fname=ADJUSTL(trim(fname))
-      !write(*,*) 'Write restart file: ', fname
+      filename=ADJUSTL(trim(filename))
+      !write(*,*) 'Write restart file: ', filename
       open(unit=77, file=filename, form='unformatted', status='replace', action='write', iostat=io_status)
       if (io_status /= 0) then
          print *, 'Error opening file!'
@@ -360,8 +360,8 @@ subroutine d3_end
    ! Write restart
    write (dirname, '(I10.10)')  n_dt
    write(filename,*) 'd3_end_dump/',trim(ADJUSTL(trim(dirname))),'_arrays_out.dat'
-   fname=ADJUSTL(trim(fname))
-   !write(*,*) 'Write restart file: ', fname
+   filename=ADJUSTL(trim(filename))
+   !write(*,*) 'Write restart file: ', filename
    open(unit=77, file=filename, form='unformatted', status='replace', action='write', iostat=io_status)
    if (io_status /= 0) then
       print *, 'Error opening file!'
