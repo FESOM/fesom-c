@@ -221,7 +221,7 @@ contains
            end do
       
         enddo ! end for nodes
-      
+
 #ifdef USE_MPI
         call exchange_nod(Kv)
         call exchange_nod(snu)
